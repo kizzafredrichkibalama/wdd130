@@ -13,35 +13,36 @@ h1 {
     color: darkblue;
 }
 
-img {
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main img {
     width: 150px;
     height: auto;
-    border: 1px;
+    border: 1px solid #ccc;
     padding: 2px;
     box-shadow: 0 0 30px gray;
-
-}
-
-p {
-    padding: 10px;
-}
-
-aside {
-    width: 20rem;
-    margin: 1px;
-    padding: 1rem;
-    border: 1px solid rgb(0, 0 green, 0 blue/0.2);
-    color: #333;
-    text-align: center;
-}
-
-img aside {
-    width: 200px;
-    height: auto;
 }
 
 p {
     padding: 0;
+}
+
+aside {
+    width: 20rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+aside img {
+    width: 200px;
+    height: auto;
 }
 
 footer {
