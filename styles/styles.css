@@ -1,52 +1,155 @@
-nav {
-    background-color: darkblue;
-    padding: 10px;
+/* 
+   Universal Selector
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav a {
-    color: white;
-    display: block;
-    padding: 20px;
+/* 
+   Class Selectors
+ */
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ddd;
+    color: #000;
 }
 
-h1 {
-    color: darkblue;
+/*
+   Body and Main
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 main {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 1rem;
 }
 
+/* 
+   Navigation
+ */
+nav {
+    background-color: darkblue;
+    padding: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #00008b;
+    /* darker blue on hover */
+}
+
+/* 
+   Headings
+ */
+h1 {
+    color: darkblue;
+    margin-bottom: 1rem;
+}
+
+/* 
+   Profile Image
+ */
 main img {
+    float: right;
     width: 150px;
     height: auto;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
 
+/* 
+   Paragraphs
+ */
 p {
-    padding: 0;
+    margin-bottom: 1rem;
 }
 
+/* 
+   Aside
+*/
 aside {
     width: 20rem;
-    margin: 1rem auto;
+    margin: 2rem auto;
     padding: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: #f4f4f4;
     color: #333;
     text-align: center;
+    position: relative;
+    /* Needed for heading overlay */
 }
 
 aside img {
-    width: 200px;
+    width: 100%;
     height: auto;
 }
 
+/* Heading overlay */
+aside h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* 
+   Footer
+*/
 footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
+    margin-top: 2rem;
+    padding: 1rem 0;
     text-align: center;
+    border-top: 1px solid #000;
+    background-color: #eee;
+}
+
+/*
+   Unordered List inside .box
+ */
+ul.box {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+ul.box li {
+    margin-bottom: 0.5rem;
+}
+
+ul.box a {
+    text-decoration: none;
+    color: darkblue;
+    transition: color 0.3s ease;
+}
+
+ul.box a:hover {
+    color: #eeff00;
+    /* YELLOW on hover */
+    text-decoration: underline;
 }

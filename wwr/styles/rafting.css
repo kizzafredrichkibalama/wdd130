@@ -1,0 +1,148 @@
+/*  CSS Variables*/
+:root {
+    --primary-color: #0b3c5d;
+    /* deep river blue */
+    --secondary-color: #328cc1;
+    /* light water blue */
+    --accent1-color: #1d2731;
+    /* dark slate */
+    --accent2-color: #d9b310;
+    /* golden sand */
+    --heading-font: "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Global Styles*/
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    background-color: #f9f9f9;
+}
+
+/* Center page content */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/*  Layout Spacing */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/*    Hero Section */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Heading Overlay */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+    opacity: 0.85;
+}
+
+/* Hero Article Overlay */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+    border-radius: 4px;
+}
+
+/* Article image */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/*   Sections */
+section h2 {
+    margin-bottom: 8px;
+}
+
+/*  Footer*/
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 16px;
+    text-align: center;
+}
+
+/* Social Media Icons */
+.socialmedia {
+    margin-top: 8px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: auto;
+}
