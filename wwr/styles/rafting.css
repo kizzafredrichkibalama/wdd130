@@ -1,4 +1,4 @@
-/*  CSS Variables*/
+/* CSS Variables */
 :root {
     --primary-color: #0b3c5d;
     /* deep river blue */
@@ -12,14 +12,16 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* CSS Reset*/
-* {
+/* CSS Reset */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Global Styles*/
+/* Global Styles */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
@@ -44,7 +46,7 @@ header {
     justify-content: space-between;
 }
 
-header img.logo {
+header img {
     width: 120px;
     height: auto;
 }
@@ -56,7 +58,9 @@ nav a {
     font-weight: bold;
 }
 
+/* ✅ secondary color now USED */
 nav a:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
@@ -67,7 +71,7 @@ h2 {
     color: var(--primary-color);
 }
 
-/*  Layout Spacing */
+/* Layout Spacing */
 nav,
 p,
 section,
@@ -76,7 +80,7 @@ article {
     padding: 8px;
 }
 
-/*    Hero Section */
+/* Hero Section */
 .hero {
     position: relative;
 }
@@ -110,7 +114,7 @@ article {
     border-radius: 4px;
 }
 
-/* Article image */
+/* Article Image */
 .hero article img {
     float: right;
     width: 125px;
@@ -119,12 +123,14 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/*   Sections */
+/* Sections */
 section h2 {
     margin-bottom: 8px;
+    color: var(--secondary-color);
+    /* ✅ secondary color used */
 }
 
-/*  Footer*/
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
