@@ -8,19 +8,8 @@
 }
 
 /* 
-   Class Selectors
+   Body
  */
-.box {
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #ddd;
-    color: #000;
-}
-
-/*
-   Body and Main
-*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -28,42 +17,79 @@ body {
     color: #333;
 }
 
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
+/* 
+   Header, Grid, Footer
+ */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 /* 
-   Navigation
+   Navigation (Flexbox)
  */
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: steelblue;
+    padding: 1rem;
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
-    color: white;
+    display: block;
+    padding: 0.5rem;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #00008b;
-    /* darker blue on hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
 }
 
 /* 
    Headings
  */
 h1 {
-    color: darkblue;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    border-bottom: 2px solid steelblue;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+/* 
+   Grid Layout
+ */
+.grid {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    align-items: start;
+    gap: 1rem;
+}
+
+/* 
+   Main & Aside
+ */
+main {
+    grid-column: 2 / 3;
+    margin: 1rem;
+}
+
+aside {
+    width: 20rem;
+    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 /* 
@@ -81,57 +107,16 @@ main img {
 }
 
 /* 
-   Paragraphs
+   Box Class & Lists
  */
-p {
-    margin-bottom: 1rem;
-}
-
-/* 
-   Aside
-*/
-aside {
-    width: 20rem;
-    margin: 2rem auto;
+.box {
+    margin: 1rem;
     padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    position: relative;
-    /* Needed for heading overlay */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ddd;
+    color: #000;
 }
 
-aside img {
-    width: 100%;
-    height: auto;
-}
-
-/* Heading overlay */
-aside h2 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-}
-
-/* 
-   Footer
-*/
-footer {
-    margin-top: 2rem;
-    padding: 1rem 0;
-    text-align: center;
-    border-top: 1px solid #000;
-    background-color: #eee;
-}
-
-/*
-   Unordered List inside .box
- */
 ul.box {
     list-style-type: disc;
     padding-left: 1.5rem;
@@ -150,11 +135,40 @@ ul.box a {
 
 ul.box a:hover {
     color: #eeff00;
-    /* YELLOW on hover */
     text-decoration: underline;
 }
 
-header,
+/* 
+   Aside Styling
+ */
+aside {
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+}
+
+aside h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* 
+   Footer
+ */
 footer {
-    max-width: 840;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid #000;
+    background-color: #eee;
 }
