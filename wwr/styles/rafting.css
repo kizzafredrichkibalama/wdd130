@@ -1,6 +1,6 @@
-/* =====================
+/* 
    CSS VARIABLES
-===================== */
+ */
 :root {
     --primary-color: #0b3c5d;
     --secondary-color: #328cc1;
@@ -8,18 +8,18 @@
     --accent2-color: #d9b310;
 }
 
-/* =====================
+/* 
    RESET
-===================== */
+ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =====================
+/* 
    BASE STYLES
-===================== */
+ */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
@@ -33,9 +33,9 @@ footer {
     margin: 0 auto;
 }
 
-/* =====================
+/* 
    HEADER (GRID)
-===================== */
+ */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -65,9 +65,9 @@ header nav a:hover {
     color: var(--secondary-color);
 }
 
-/* =====================
+/* 
    HERO
-===================== */
+ */
 .hero {
     position: relative;
 }
@@ -104,9 +104,9 @@ header nav a:hover {
     margin-left: 1rem;
 }
 
-/* =====================
+/* 
    HISTORY
-===================== */
+ */
 .history {
     padding: 2rem 1rem;
 }
@@ -127,9 +127,9 @@ header nav a:hover {
     width: 100%;
 }
 
-/* =====================
+/* 
    ADVENTURES
-===================== */
+ */
 .adventures {
     padding: 2rem 1rem;
     text-align: center;
@@ -150,9 +150,9 @@ figcaption {
     font-size: 0.9rem;
 }
 
-/* =====================
+/* 
    FOOTER
-===================== */
+ */
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
