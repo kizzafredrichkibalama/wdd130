@@ -153,3 +153,8 @@ ul.box a:hover {
     /* YELLOW on hover */
     text-decoration: underline;
 }
+
+header,
+footer {
+    max-width: 840;
+}
