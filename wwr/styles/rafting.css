@@ -1,6 +1,6 @@
-/* 
+/* ===============================
    CSS VARIABLES
- */
+================================ */
 :root {
     --primary-color: #0b3c5d;
     --secondary-color: #328cc1;
@@ -8,18 +8,18 @@
     --accent2-color: #d9b310;
 }
 
-/* 
+/* ===============================
    RESET
- */
+================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 
-   BASE STYLES
- */
+/* ===============================
+   BASE
+================================ */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
@@ -33,9 +33,9 @@ footer {
     margin: 0 auto;
 }
 
-/* 
-   HEADER (GRID)
- */
+/* ===============================
+   HEADER
+================================ */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -48,7 +48,6 @@ header img {
     width: 120px;
 }
 
-/* NAV (FLEX) */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -65,9 +64,9 @@ header nav a:hover {
     color: var(--secondary-color);
 }
 
-/* 
+/* ===============================
    HERO
- */
+================================ */
 .hero {
     position: relative;
 }
@@ -99,49 +98,31 @@ header nav a:hover {
 .hero article img {
     float: right;
     width: 120px;
-
-    margin-left: 15px;
     margin-left: 1rem;
 }
 
-/* 
-   HISTORY
- */
-.history {
+/* ===============================
+   SECTIONS
+================================ */
+section {
     padding: 2rem 1rem;
 }
 
-.history h2 {
+section h2 {
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.history-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    align-items: center;
-}
-
-.history-grid img {
-    width: 100%;
-}
-
-/* 
-   ADVENTURES
- */
-.adventures {
-    padding: 2rem 1rem;
+/* ===============================
+   ADVENTURE FIGURES
+================================ */
+section figure {
+    display: inline-block;
+    margin: 0.5rem;
     text-align: center;
 }
 
-.adventure-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-figure img {
+section figure img {
     width: 120px;
 }
 
@@ -150,9 +131,9 @@ figcaption {
     font-size: 0.9rem;
 }
 
-/* 
+/* ===============================
    FOOTER
- */
+================================ */
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
