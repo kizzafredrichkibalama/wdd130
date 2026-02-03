@@ -3,19 +3,19 @@
 ================================ */
 :root {
     --primary-color: #0b3c5d;
-    /* header & footer bg */
+    /* dark blue background */
     --secondary-color: #328cc1;
-    /* accent links */
+    /* accent link hover */
     --accent1-color: #1d2731;
-    /* body text */
+    /* main dark text */
     --accent2-color: #d9b310;
-    /* highlights, footer text */
+    /* highlights */
     --white: #ffffff;
-    /* high contrast text */
+    /* high contrast white */
 }
 
 /* ================================
-   UNIVERSAL RESET
+   RESET
 ================================ */
 *,
 *::before,
@@ -32,6 +32,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
     color: var(--accent1-color);
+    line-height: 1.6;
 }
 
 header,
@@ -42,7 +43,7 @@ footer {
 }
 
 /* ================================
-   HEADER
+   HEADER (GRID)
 ================================ */
 header {
     display: grid;
@@ -56,7 +57,6 @@ header img {
     width: 120px;
 }
 
-/* NAVIGATION FLEX */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -65,7 +65,7 @@ header nav {
 
 header nav a {
     color: var(--white);
-    /* Fixed contrast */
+    /* FIXED: high contrast */
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -76,7 +76,7 @@ header nav a:hover {
 }
 
 /* ================================
-   HERO SECTION
+   HERO
 ================================ */
 .hero {
     position: relative;
@@ -94,7 +94,9 @@ header nav a:hover {
     text-align: center;
     background-color: rgba(29, 39, 49, 0.8);
     color: var(--white);
+    /* FIXED: white text for contrast */
     padding: 1rem;
+    font-size: 2rem;
 }
 
 .hero article {
@@ -103,7 +105,10 @@ header nav a:hover {
     left: 20px;
     right: 20px;
     background-color: rgba(255, 255, 255, 0.9);
+    color: var(--accent1-color);
+    /* good contrast on white */
     padding: 1rem;
+    font-size: 1rem;
 }
 
 .hero article img {
@@ -113,7 +118,7 @@ header nav a:hover {
 }
 
 /* ================================
-   HISTORY SECTION
+   HISTORY
 ================================ */
 .history {
     padding: 2rem 1rem;
@@ -122,6 +127,7 @@ header nav a:hover {
 .history h2 {
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--accent1-color);
 }
 
 .history-grid {
@@ -136,17 +142,23 @@ header nav a:hover {
 }
 
 /* ================================
-   ADVENTURES SECTION
+   ADVENTURES
 ================================ */
 .adventures {
     padding: 2rem 1rem;
     text-align: center;
 }
 
+.adventures h2 {
+    color: var(--accent1-color);
+    margin-bottom: 1rem;
+}
+
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 figure img {
@@ -157,6 +169,7 @@ figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: var(--accent1-color);
+    /* ensures good contrast */
 }
 
 /* ================================
@@ -167,13 +180,14 @@ footer {
     grid-template-columns: 1fr auto;
     align-items: center;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--white);
+    /* high contrast footer text */
     padding: 1rem;
 }
 
 footer p {
     margin: 0;
-    color: var(--accent2-color);
+    font-size: 0.9rem;
 }
 
 .socialmedia {
@@ -183,11 +197,4 @@ footer p {
 
 .socialmedia img {
     width: 30px;
-}
-
-/* ================================
-   GENERAL LINKS
-================================ */
-a {
-    transition: color 0.3s ease;
 }
