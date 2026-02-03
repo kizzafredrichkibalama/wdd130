@@ -3,20 +3,23 @@
 ================================ */
 :root {
     --primary-color: #0b3c5d;
-    /* dark blue */
+    /* header & footer bg */
     --secondary-color: #328cc1;
-    /* light blue */
+    /* accent links */
     --accent1-color: #1d2731;
-    /* dark slate */
+    /* body text */
     --accent2-color: #d9b310;
-    /* golden sand */
+    /* highlights, footer text */
     --white: #ffffff;
+    /* high contrast text */
 }
 
 /* ================================
    UNIVERSAL RESET
 ================================ */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -62,7 +65,7 @@ header nav {
 
 header nav a {
     color: var(--white);
-    /* Fixed contrast issue */
+    /* Fixed contrast */
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -153,6 +156,7 @@ figure img {
 figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
+    color: var(--accent1-color);
 }
 
 /* ================================
@@ -169,6 +173,7 @@ footer {
 
 footer p {
     margin: 0;
+    color: var(--accent2-color);
 }
 
 .socialmedia {
