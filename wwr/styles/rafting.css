@@ -1,27 +1,33 @@
-/* 
+/* ================================
    CSS VARIABLES
-*/
+================================ */
 :root {
     --primary-color: #0b3c5d;
+    /* dark blue */
     --secondary-color: #328cc1;
+    /* light blue */
     --accent1-color: #1d2731;
+    /* dark slate */
     --accent2-color: #d9b310;
+    /* gold */
     --white: #ffffff;
-    /* optional for standardizing */
+    /* white */
 }
 
-/* 
+/* ================================
    RESET
-*/
-* {
+================================ */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 
+/* ================================
    BASE STYLES
-*/
+================================ */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
@@ -35,24 +41,21 @@ footer {
     margin: 0 auto;
 }
 
-/* 
-   HEADER (GRID)
-*/
+/* ================================
+   HEADER
+================================ */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--primary-color);
     padding: 1rem;
-    color: var(--white);
-    /* Added to fix contrast issue */
 }
 
 header img {
     width: 120px;
 }
 
-/* NAV (FLEX) */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -61,6 +64,7 @@ header nav {
 
 header nav a {
     color: var(--white);
+    /* fixed contrast issue */
     text-decoration: none;
     font-weight: bold;
 }
@@ -69,9 +73,9 @@ header nav a:hover {
     color: var(--secondary-color);
 }
 
-/* 
+/* ================================
    HERO
-*/
+================================ */
 .hero {
     position: relative;
 }
@@ -106,9 +110,9 @@ header nav a:hover {
     margin-left: 1rem;
 }
 
-/* 
+/* ================================
    HISTORY
-*/
+================================ */
 .history {
     padding: 2rem 1rem;
 }
@@ -129,9 +133,9 @@ header nav a:hover {
     width: 100%;
 }
 
-/* 
+/* ================================
    ADVENTURES
-*/
+================================ */
 .adventures {
     padding: 2rem 1rem;
     text-align: center;
@@ -141,10 +145,16 @@ header nav a:hover {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.adventure-gallery figure {
+    flex: 1 1 120px;
 }
 
 figure img {
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
 }
 
 figcaption {
@@ -152,9 +162,9 @@ figcaption {
     font-size: 0.9rem;
 }
 
-/* 
+/* ================================
    FOOTER
-*/
+================================ */
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
