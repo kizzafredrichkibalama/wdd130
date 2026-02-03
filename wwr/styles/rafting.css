@@ -3,22 +3,20 @@
 ================================ */
 :root {
     --primary-color: #0b3c5d;
-    /* Deep River Blue */
+    /* dark blue */
     --secondary-color: #328cc1;
-    /* Light Water Blue */
+    /* light blue */
     --accent1-color: #1d2731;
-    /* Dark Slate */
+    /* dark slate */
     --accent2-color: #d9b310;
-    /* Golden Sand */
+    /* golden sand */
     --white: #ffffff;
 }
 
 /* ================================
-   RESET
+   UNIVERSAL RESET
 ================================ */
-*,
-*::before,
-*::after {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,13 +27,11 @@
 ================================ */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
     background-color: #f9f9f9;
     color: var(--accent1-color);
 }
 
 header,
-.grid,
 main,
 footer {
     max-width: 840px;
@@ -57,6 +53,7 @@ header img {
     width: 120px;
 }
 
+/* NAVIGATION FLEX */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -64,13 +61,11 @@ header nav {
 }
 
 header nav a {
-    display: block;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--accent2-color);
+    color: var(--white);
+    /* Fixed contrast issue */
     text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 header nav a:hover {
@@ -82,7 +77,6 @@ header nav a:hover {
 ================================ */
 .hero {
     position: relative;
-    margin: 2rem 0;
 }
 
 .hero img {
@@ -98,8 +92,6 @@ header nav a:hover {
     background-color: rgba(29, 39, 49, 0.8);
     color: var(--white);
     padding: 1rem;
-    font-size: 2rem;
-    border-bottom: 3px solid var(--accent2-color);
 }
 
 .hero article {
@@ -109,7 +101,6 @@ header nav a:hover {
     right: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem;
-    color: var(--accent1-color);
 }
 
 .hero article img {
@@ -132,14 +123,13 @@ header nav a:hover {
 
 .history-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     align-items: center;
 }
 
 .history-grid img {
     width: 100%;
-    border-radius: 5px;
 }
 
 /* ================================
@@ -150,25 +140,14 @@ header nav a:hover {
     text-align: center;
 }
 
-.adventures h2 {
-    margin-bottom: 1rem;
-}
-
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
-.adventure-gallery figure {
-    flex: 1 1 calc(20% - 1rem);
-    text-align: center;
-}
-
-.adventure-gallery img {
-    width: 100%;
-    border-radius: 5px;
+figure img {
+    width: 120px;
 }
 
 figcaption {
@@ -186,11 +165,10 @@ footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
     padding: 1rem;
-    margin-top: 2rem;
 }
 
 footer p {
-    font-weight: bold;
+    margin: 0;
 }
 
 .socialmedia {
@@ -200,22 +178,11 @@ footer p {
 
 .socialmedia img {
     width: 30px;
-    height: auto;
 }
 
 /* ================================
-   LINKS & LISTS
+   GENERAL LINKS
 ================================ */
 a {
     transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ul,
-ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
 }
