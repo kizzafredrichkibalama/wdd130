@@ -3,15 +3,15 @@
 ================================ */
 :root {
     --primary-color: #0b3c5d;
-    /* dark blue background */
+    /* dark blue header/footer */
     --secondary-color: #328cc1;
-    /* accent link hover */
+    /* light blue accent */
     --accent1-color: #1d2731;
-    /* main dark text */
+    /* dark slate text */
     --accent2-color: #d9b310;
-    /* highlights */
+    /* golden accent */
     --white: #ffffff;
-    /* high contrast white */
+    /* white text/background */
 }
 
 /* ================================
@@ -32,7 +32,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
     color: var(--accent1-color);
-    line-height: 1.6;
 }
 
 header,
@@ -65,10 +64,9 @@ header nav {
 
 header nav a {
     color: var(--white);
-    /* FIXED: high contrast */
+    /* FIXED: White text for accessibility */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 header nav a:hover {
@@ -94,9 +92,7 @@ header nav a:hover {
     text-align: center;
     background-color: rgba(29, 39, 49, 0.8);
     color: var(--white);
-    /* FIXED: white text for contrast */
     padding: 1rem;
-    font-size: 2rem;
 }
 
 .hero article {
@@ -105,10 +101,7 @@ header nav a:hover {
     left: 20px;
     right: 20px;
     background-color: rgba(255, 255, 255, 0.9);
-    color: var(--accent1-color);
-    /* good contrast on white */
     padding: 1rem;
-    font-size: 1rem;
 }
 
 .hero article img {
@@ -127,7 +120,6 @@ header nav a:hover {
 .history h2 {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--accent1-color);
 }
 
 .history-grid {
@@ -150,7 +142,6 @@ header nav a:hover {
 }
 
 .adventures h2 {
-    color: var(--accent1-color);
     margin-bottom: 1rem;
 }
 
@@ -161,15 +152,18 @@ header nav a:hover {
     flex-wrap: wrap;
 }
 
+.adventure-gallery figure {
+    flex: 1 1 120px;
+}
+
 figure img {
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
 }
 
 figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: var(--accent1-color);
-    /* ensures good contrast */
 }
 
 /* ================================
@@ -180,19 +174,21 @@ footer {
     grid-template-columns: 1fr auto;
     align-items: center;
     background-color: var(--primary-color);
-    color: var(--white);
-    /* high contrast footer text */
+    color: var(--accent2-color);
     padding: 1rem;
 }
 
 footer p {
-    margin: 0;
-    font-size: 0.9rem;
+    color: var(--white);
 }
 
 .socialmedia {
     display: flex;
     gap: 0.5rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
 
 .socialmedia img {
