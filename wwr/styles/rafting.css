@@ -1,58 +1,62 @@
-/* 
+/* ================================
    CSS VARIABLES
-*/
+================================ */
 :root {
     --primary-color: #0b3c5d;
+    /* Deep River Blue */
     --secondary-color: #328cc1;
+    /* Light Water Blue */
     --accent1-color: #1d2731;
+    /* Dark Slate */
     --accent2-color: #d9b310;
+    /* Golden Sand */
     --white: #ffffff;
-    /* optional for standardizing */
 }
 
-/* 
+/* ================================
    RESET
-*/
-* {
+================================ */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 
+/* ================================
    BASE STYLES
-*/
+================================ */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
     background-color: #f9f9f9;
     color: var(--accent1-color);
 }
 
 header,
+.grid,
 main,
 footer {
     max-width: 840px;
     margin: 0 auto;
 }
 
-/* 
-   HEADER (GRID)
-*/
+/* ================================
+   HEADER
+================================ */
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--primary-color);
     padding: 1rem;
-    color: var(--white);
-    /* Added to fix contrast issue */
 }
 
 header img {
     width: 120px;
 }
 
-/* NAV (FLEX) */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -60,20 +64,25 @@ header nav {
 }
 
 header nav a {
-    color: var(--white);
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent2-color);
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 header nav a:hover {
     color: var(--secondary-color);
 }
 
-/* 
-   HERO
-*/
+/* ================================
+   HERO SECTION
+================================ */
 .hero {
     position: relative;
+    margin: 2rem 0;
 }
 
 .hero img {
@@ -89,6 +98,8 @@ header nav a:hover {
     background-color: rgba(29, 39, 49, 0.8);
     color: var(--white);
     padding: 1rem;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--accent2-color);
 }
 
 .hero article {
@@ -98,6 +109,7 @@ header nav a:hover {
     right: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem;
+    color: var(--accent1-color);
 }
 
 .hero article img {
@@ -106,9 +118,9 @@ header nav a:hover {
     margin-left: 1rem;
 }
 
-/* 
-   HISTORY
-*/
+/* ================================
+   HISTORY SECTION
+================================ */
 .history {
     padding: 2rem 1rem;
 }
@@ -120,31 +132,43 @@ header nav a:hover {
 
 .history-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     align-items: center;
 }
 
 .history-grid img {
     width: 100%;
+    border-radius: 5px;
 }
 
-/* 
-   ADVENTURES
-*/
+/* ================================
+   ADVENTURES SECTION
+================================ */
 .adventures {
     padding: 2rem 1rem;
     text-align: center;
+}
+
+.adventures h2 {
+    margin-bottom: 1rem;
 }
 
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-figure img {
-    width: 120px;
+.adventure-gallery figure {
+    flex: 1 1 calc(20% - 1rem);
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 figcaption {
@@ -152,9 +176,9 @@ figcaption {
     font-size: 0.9rem;
 }
 
-/* 
+/* ================================
    FOOTER
-*/
+================================ */
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -162,6 +186,11 @@ footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
     padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-weight: bold;
 }
 
 .socialmedia {
@@ -171,4 +200,22 @@ footer {
 
 .socialmedia img {
     width: 30px;
+    height: auto;
+}
+
+/* ================================
+   LINKS & LISTS
+================================ */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
 }
