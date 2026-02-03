@@ -1,38 +1,31 @@
-/* ================================
+/* 
    CSS VARIABLES
-================================ */
+*/
 :root {
     --primary-color: #0b3c5d;
-    /* dark blue background */
     --secondary-color: #328cc1;
-    /* accent link hover */
     --accent1-color: #1d2731;
-    /* main dark text */
     --accent2-color: #d9b310;
-    /* highlights */
     --white: #ffffff;
-    /* high contrast white */
+    /* optional for standardizing */
 }
 
-/* ================================
+/* 
    RESET
-================================ */
-*,
-*::before,
-*::after {
+*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ================================
+/* 
    BASE STYLES
-================================ */
+*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f9f9f9;
     color: var(--accent1-color);
-    line-height: 1.6;
 }
 
 header,
@@ -42,21 +35,24 @@ footer {
     margin: 0 auto;
 }
 
-/* ================================
+/* 
    HEADER (GRID)
-================================ */
+*/
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
     align-items: center;
     background-color: var(--primary-color);
     padding: 1rem;
+    color: var(--white);
+    /* Added to fix contrast issue */
 }
 
 header img {
     width: 120px;
 }
 
+/* NAV (FLEX) */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -65,19 +61,17 @@ header nav {
 
 header nav a {
     color: var(--white);
-    /* FIXED: high contrast */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 header nav a:hover {
     color: var(--secondary-color);
 }
 
-/* ================================
+/* 
    HERO
-================================ */
+*/
 .hero {
     position: relative;
 }
@@ -94,9 +88,7 @@ header nav a:hover {
     text-align: center;
     background-color: rgba(29, 39, 49, 0.8);
     color: var(--white);
-    /* FIXED: white text for contrast */
     padding: 1rem;
-    font-size: 2rem;
 }
 
 .hero article {
@@ -105,10 +97,7 @@ header nav a:hover {
     left: 20px;
     right: 20px;
     background-color: rgba(255, 255, 255, 0.9);
-    color: var(--accent1-color);
-    /* good contrast on white */
     padding: 1rem;
-    font-size: 1rem;
 }
 
 .hero article img {
@@ -117,9 +106,9 @@ header nav a:hover {
     margin-left: 1rem;
 }
 
-/* ================================
+/* 
    HISTORY
-================================ */
+*/
 .history {
     padding: 2rem 1rem;
 }
@@ -127,7 +116,6 @@ header nav a:hover {
 .history h2 {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--accent1-color);
 }
 
 .history-grid {
@@ -141,24 +129,18 @@ header nav a:hover {
     width: 100%;
 }
 
-/* ================================
+/* 
    ADVENTURES
-================================ */
+*/
 .adventures {
     padding: 2rem 1rem;
     text-align: center;
-}
-
-.adventures h2 {
-    color: var(--accent1-color);
-    margin-bottom: 1rem;
 }
 
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 figure img {
@@ -168,26 +150,18 @@ figure img {
 figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: var(--accent1-color);
-    /* ensures good contrast */
 }
 
-/* ================================
+/* 
    FOOTER
-================================ */
+*/
 footer {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     background-color: var(--primary-color);
-    color: var(--white);
-    /* high contrast footer text */
+    color: var(--accent2-color);
     padding: 1rem;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
 }
 
 .socialmedia {
