@@ -3,19 +3,19 @@
 ================================ */
 :root {
     --primary-color: #0b3c5d;
-    /* dark blue header/footer */
+    /* header & footer bg */
     --secondary-color: #328cc1;
-    /* light blue accent */
+    /* accent links */
     --accent1-color: #1d2731;
-    /* dark slate text */
+    /* body text */
     --accent2-color: #d9b310;
-    /* golden accent */
+    /* highlights, footer text */
     --white: #ffffff;
-    /* white text/background */
+    /* high contrast text */
 }
 
 /* ================================
-   RESET
+   UNIVERSAL RESET
 ================================ */
 *,
 *::before,
@@ -42,7 +42,7 @@ footer {
 }
 
 /* ================================
-   HEADER (GRID)
+   HEADER
 ================================ */
 header {
     display: grid;
@@ -56,6 +56,7 @@ header img {
     width: 120px;
 }
 
+/* NAVIGATION FLEX */
 header nav {
     display: flex;
     justify-content: flex-end;
@@ -64,9 +65,10 @@ header nav {
 
 header nav a {
     color: var(--white);
-    /* FIXED: White text for accessibility */
+    /* Fixed contrast */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 header nav a:hover {
@@ -74,7 +76,7 @@ header nav a:hover {
 }
 
 /* ================================
-   HERO
+   HERO SECTION
 ================================ */
 .hero {
     position: relative;
@@ -111,7 +113,7 @@ header nav a:hover {
 }
 
 /* ================================
-   HISTORY
+   HISTORY SECTION
 ================================ */
 .history {
     padding: 2rem 1rem;
@@ -134,32 +136,58 @@ header nav a:hover {
 }
 
 /* ================================
-   ADVENTURES
+   ADVENTURES SECTION
 ================================ */
 .adventures {
     padding: 2rem 1rem;
     text-align: center;
 }
 
-.adventures h2 {
-    margin-bottom: 1rem;
-}
-
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.adventure-gallery figure {
-    flex: 1 1 120px;
 }
 
 figure img {
-    width: 100%;
-    max-width: 120px;
+    width: 120px;
 }
 
 figcaption {
-    ma
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--accent1-color);
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    color: var(--accent2-color);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.socialmedia img {
+    width: 30px;
+}
+
+/* ================================
+   GENERAL LINKS
+================================ */
+a {
+    transition: color 0.3s ease;
+}
