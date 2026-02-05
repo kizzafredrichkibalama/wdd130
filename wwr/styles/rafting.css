@@ -50,6 +50,9 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     padding: 1rem;
+
+    /* FIX: ensure all header text defaults to white for proper contrast */
+    color: var(--white);
 }
 
 header img {
@@ -62,9 +65,9 @@ header nav {
     gap: 1rem;
 }
 
+/* keep link color explicit (also white) */
 header nav a {
     color: var(--white);
-    /* fixed contrast issue */
     text-decoration: none;
     font-weight: bold;
 }
@@ -172,6 +175,11 @@ footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
     padding: 1rem;
+}
+
+/* make footer text white for contrast with primary bg */
+footer p {
+    color: var(--white);
 }
 
 .socialmedia {
