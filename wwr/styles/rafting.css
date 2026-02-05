@@ -36,7 +36,7 @@ header img {
 
 header nav a {
     color: var(--white);
-    /* ✅ FIXED */
+
     text-decoration: none;
     margin-left: 1.5rem;
     font-weight: bold;
