@@ -3,21 +3,13 @@
 ================================ */
 :root {
     --primary-color: rgb(11 60 93);
-    /* header/footer bg */
     --secondary-color: rgb(50 140 193);
-    /* accent (use for borders / hover only) */
     --accent1-color: rgb(29 39 49);
-    /* main body text (dark) */
     --accent2-color: rgb(217 179 16);
-    /* highlight/gold */
     --white: rgb(255 255 255);
-    /* white */
     --background-light: rgb(249 249 249);
-    /* page background */
     --overlay-dark: rgba(29, 39, 49, 0.8);
-    /* hero overlay dark */
     --overlay-light: rgba(255, 255, 255, 0.9);
-    /* hero overlay light */
 }
 
 /* ================================
@@ -32,7 +24,7 @@
 }
 
 /* ================================
-   BASE
+   BASE STYLES
 ================================ */
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -58,12 +50,10 @@ header {
     background-color: var(--primary-color);
     padding: 1rem;
     color: var(--white);
-    /* ensure inherited header text is white */
 }
 
 header img {
     width: 120px;
-    height: auto;
 }
 
 header nav {
@@ -73,8 +63,6 @@ header nav {
 }
 
 header nav a {
-    display: block;
-    padding: 0.25rem 0.5rem;
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
@@ -82,7 +70,7 @@ header nav a {
 
 header nav a:hover {
     color: var(--secondary-color);
-    /* accent on hover */
+    /* accent only */
 }
 
 /* ================================
@@ -96,20 +84,16 @@ header nav a:hover {
 .hero img {
     width: 100%;
     display: block;
-    height: auto;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 0;
-    right: 0;
+    width: 100%;
     text-align: center;
     background-color: var(--overlay-dark);
     color: var(--white);
     padding: 1rem;
-    font-size: 2rem;
-    border-bottom: 3px solid var(--accent2-color);
 }
 
 .hero article {
@@ -118,22 +102,14 @@ header nav a:hover {
     left: 20px;
     right: 20px;
     background-color: var(--overlay-light);
-    color: var(--accent1-color);
     padding: 1rem;
-    max-width: 60ch;
+    color: var(--accent1-color);
 }
 
 .hero article img {
     float: right;
     width: 120px;
-    height: auto;
     margin-left: 1rem;
-}
-
-.hero article::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* ================================
@@ -148,11 +124,7 @@ header nav a:hover {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--accent1-color);
-    /* DARK text for contrast (fixed) */
-    border-bottom: 4px solid var(--secondary-color);
-    /* decorative accent - ok */
-    display: inline-block;
-    padding-bottom: 0.25rem;
+    /* ✅ FIXED CONTRAST */
 }
 
 .history-grid {
@@ -164,9 +136,6 @@ header nav a:hover {
 
 .history-grid img {
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
 }
 
 /* ================================
@@ -181,11 +150,7 @@ header nav a:hover {
 .adventures h2 {
     margin-bottom: 1rem;
     color: var(--accent1-color);
-    /* DARK text for contrast (fixed) */
-    border-bottom: 4px solid var(--secondary-color);
-    /* decorative accent */
-    display: inline-block;
-    padding-bottom: 0.25rem;
+    /* ✅ FIXED CONTRAST */
 }
 
 .adventure-gallery {
@@ -193,23 +158,15 @@ header nav a:hover {
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
-    align-items: flex-start;
 }
 
 .adventure-gallery figure {
-    flex: 1 1 calc(20% - 1rem);
-    min-width: 120px;
-    text-align: center;
+    flex: 1 1 120px;
 }
 
-.adventure-gallery img,
 figure img {
     width: 100%;
-    max-width: 220px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 4px;
+    max-width: 120px;
 }
 
 figcaption {
@@ -228,13 +185,6 @@ footer {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem;
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0;
-    color: var(--white);
-    font-weight: 600;
 }
 
 .socialmedia {
@@ -244,6 +194,4 @@ footer p {
 
 .socialmedia img {
     width: 30px;
-    height: auto;
-    display: block;
 }
