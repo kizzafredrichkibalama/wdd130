@@ -3,13 +3,21 @@
 ================================ */
 :root {
     --primary-color: rgb(11 60 93);
+    /* dark blue (header/footer bg) */
     --secondary-color: rgb(50 140 193);
+    /* light water blue (hover/accent) */
     --accent1-color: rgb(29 39 49);
+    /* main dark text */
     --accent2-color: rgb(217 179 16);
+    /* golden accent (used for borders/highlight) */
     --white: rgb(255 255 255);
+    /* white */
     --background-light: rgb(249 249 249);
+    /* page background */
     --overlay-dark: rgba(29, 39, 49, 0.8);
+    /* hero overlay dark */
     --overlay-light: rgba(255, 255, 255, 0.9);
+    /* hero overlay light */
 }
 
 /* ================================
@@ -24,8 +32,13 @@
 }
 
 /* ================================
-   BASE STYLES
+   BASE
 ================================ */
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--accent1-color);
@@ -33,6 +46,7 @@ body {
     line-height: 1.6;
 }
 
+/* constrain layout */
 header,
 main,
 footer {
@@ -41,7 +55,7 @@ footer {
 }
 
 /* ================================
-   HEADER
+   HEADER (grid) + NAV (flex)
 ================================ */
 header {
     display: grid;
@@ -50,10 +64,13 @@ header {
     background-color: var(--primary-color);
     padding: 1rem;
     color: var(--white);
+    /* ensure inherited header text is white for contrast */
 }
 
 header img {
     width: 120px;
+    height: auto;
+    display: block;
 }
 
 header nav {
@@ -62,15 +79,21 @@ header nav {
     gap: 1rem;
 }
 
+/* links are block-like, white, accessible */
 header nav a {
+    display: block;
+    padding: 0.25rem 0.5rem;
     color: var(--white);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
     color: var(--secondary-color);
-    /* accent only */
+    /* decorative accent on hover/focus */
+    outline: none;
 }
 
 /* ================================
@@ -83,33 +106,49 @@ header nav a:hover {
 
 .hero img {
     width: 100%;
+    height: auto;
     display: block;
 }
 
+/* h1 overlays hero image, with accent border (uses --accent2-color) */
 .hero h1 {
     position: absolute;
     top: 20px;
-    width: 100%;
+    left: 0;
+    right: 0;
     text-align: center;
     background-color: var(--overlay-dark);
     color: var(--white);
     padding: 1rem;
+    font-size: 2rem;
+    border-bottom: 4px solid var(--accent2-color);
+    /* uses accent2 */
 }
 
+/* article overlays hero and includes floated image */
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
     background-color: var(--overlay-light);
-    padding: 1rem;
     color: var(--accent1-color);
+    padding: 1rem;
+    max-width: 60ch;
 }
 
 .hero article img {
     float: right;
     width: 120px;
+    height: auto;
     margin-left: 1rem;
+}
+
+/* clearfix for floated img */
+.hero article::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* ================================
@@ -124,7 +163,11 @@ header nav a:hover {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--accent1-color);
-    /* ✅ FIXED CONTRAST */
+    /* dark for contrast */
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid var(--accent2-color);
+    /* decorative accent */
 }
 
 .history-grid {
@@ -136,6 +179,9 @@ header nav a:hover {
 
 .history-grid img {
     width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
 }
 
 /* ================================
@@ -150,6 +196,10 @@ header nav a:hover {
 .adventures h2 {
     margin-bottom: 1rem;
     color: var(--accent1-color);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid var(--accent2-color);
+    /* decorative accent */
 }
 
 .adventure-gallery {
@@ -157,15 +207,25 @@ header nav a:hover {
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
+/* each figure takes roughly 20% minus gaps; flexible and responsive */
 .adventure-gallery figure {
-    flex: 1 1 120px;
+    flex: 1 1 calc(20% - 1rem);
+    min-width: 120px;
+    text-align: center;
+    margin: 0;
 }
 
+.adventure-gallery img,
 figure img {
     width: 100%;
-    max-width: 120px;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
 }
 
 figcaption {
@@ -184,8 +244,16 @@ footer {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem;
+    margin-top: 2rem;
 }
 
+footer p {
+    margin: 0;
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* social icons to the right */
 .socialmedia {
     display: flex;
     gap: 0.5rem;
@@ -193,4 +261,51 @@ footer {
 
 .socialmedia img {
     width: 30px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .adventure-gallery {
+        justify-content: center;
+    }
+
+    .adventure-gallery figure {
+        flex: 1 1 45%;
+        margin-bottom: 1rem;
+    }
+
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .hero article {
+        position: static;
+        transform: none;
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    .hero article img {
+        float: none;
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
 }
