@@ -5,7 +5,7 @@
     --primary-color: rgb(11 60 93);
     --secondary-color: rgb(50 140 193);
     --accent1-color: rgb(29 39 49);
-    --accent2-color: rgb(217 179 16);
+
     --white: rgb(255 255 255);
     --background-light: rgb(249 249 249);
     --overlay-dark: rgba(29, 39, 49, 0.8);
@@ -124,7 +124,7 @@ header nav a:hover {
     text-align: center;
     margin-bottom: 1rem;
     color: var(--accent1-color);
-    /* ✅ FIXED CONTRAST */
+
 }
 
 .history-grid {
