@@ -150,7 +150,7 @@ header nav a:hover {
 .adventures h2 {
     margin-bottom: 1rem;
     color: var(--accent1-color);
-    /* ✅ FIXED CONTRAST */
+
 }
 
 .adventure-gallery {
