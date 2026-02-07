@@ -2,92 +2,123 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Water Rafting Co. | About Us</title>
-    <meta name="description"
-      content="Learn more about White Water Rafting Co., our history, mission, and adventure experiences.">
-    <meta name="author" content="Kizza Fredrich Kibalama">
-    <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Water Rafting Co. | Contact Us</title>
+  <meta name="description"
+    content="Contact White Water Rafting Co. with questions about trips, reservations, or suggestions.">
+  <meta name="author" content="Kizza Fredrich Kibalama">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="images/logo.jpg" alt="White Water Rafting Logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.jpg" alt="White Water Rafting Logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-    <main>
+  <main>
 
-        <!-- HERO (changed to DIV per rubric) -->
-        <div class="hero">
-            <img src="images/hero.jpg" alt="Rafting adventure on river rapids">
-            <h1>White Water Rafting Co.</h1>
-            <article>
-                <p>We provide thrilling, safe, and unforgettable rafting experiences. Our guides are
-                    passionate about rivers, adventure, and teamwork.</p>
-                <img src="images/happy-client.jpg" alt="Happy rafting client">
-            </article>
-        </div>
+    <!-- CONTACT INFO -->
+    <section class="contact-info">
+      <h1>White Water Rafting Company</h1>
+      <p>123 Main River Street<br>Kolob, California</p>
+      <p>📞 +1 999 999 9999</p>
+      <p>✉️ info@whitewater.com</p>
+    </section>
 
-        <!-- HISTORY -->
-        <section class="history">
-            <h2>History</h2>
-            <div class="history-grid">
-                <p>Founded in 2005, White Water Rafting Co. began as a small group of outdoor
-                    enthusiasts.</p>
-                <img src="images/history.jpg" alt="Rafting history">
-                <p>Today, we offer guided trips across multiple rivers while maintaining our core
-                    values of safety, excitement, and respect for nature.</p>
-            </div>
-        </section>
+    <!-- MAP + FORM -->
+    <section class="contact-grid">
 
-        <!-- ADVENTURES -->
-        <section class="adventures">
-            <h2>Adventure Awaits You!</h2>
-            <div class="adventure-gallery">
-                <figure>
-                    <img src="images/adventure1.jpg" alt="Los Dientes del Diablo">
-                    <figcaption>Los Dientes del Diablo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/adventure2.jpg" alt="Big Mallard">
-                    <figcaption>Big Mallard</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/adventure3.jpg" alt="Half Day Adventure">
-                    <figcaption>Half Day Adventure</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/adventure4.jpg" alt="Full Day Extreme">
-                    <figcaption>Full Day Extreme</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/adventure5.jpg" alt="Family Adventure">
-                    <figcaption>Family Adventure</figcaption>
-                </figure>
-            </div>
-        </section>
+      <!-- MAP -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019259274926!2d-113.186!3d37.298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
 
-    </main>
+      <!-- FORM -->
+      <form class="contact-form" action="#" method="post">
+        <fieldset>
+          <legend>Get in Touch</legend>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 White Water Rafting Co. | Kizza Fredrich Kibalama</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="https://linkedin.com"><img src="images/linkedin.png" alt="LinkedIn"></a>
-            <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
-        </nav>
-    </footer>
+          <!-- TEXT INPUT -->
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+
+          <!-- EMAIL INPUT -->
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <!-- RADIO BUTTONS -->
+          <p>Message Purpose</p>
+
+          <input type="radio" id="general" name="purpose" value="general" required>
+          <label for="general">General Inquiry</label>
+
+          <input type="radio" id="reservation" name="purpose" value="reservation">
+          <label for="reservation">Reservation Question</label>
+
+          <input type="radio" id="suggestion" name="purpose" value="suggestion">
+          <label for="suggestion">Website Suggestion</label>
+
+          <!-- TEXTAREA -->
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <!-- CHECKBOX -->
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+
+          <!-- SUBMIT BUTTON -->
+          <button type="submit">Get in Touch!</button>
+        </fieldset>
+      </form>
+
+    </section>
+
+    <!-- EMPLOYEES -->
+    <section class="employees">
+      <h2>We Are Here to Serve You</h2>
+
+      <div class="employee-grid">
+        <figure>
+          <img src="images/employee1.jpg" alt="Lead River Guide">
+          <figcaption>Alex Johnson – Lead River Guide</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/employee2.jpg" alt="Operations Manager">
+          <figcaption>Maria Lopez – Operations Manager</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/employee3.jpg" alt="Customer Support">
+          <figcaption>Daniel Kim – Customer Support</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 White Water Rafting Co. | Kizza Fredrich Kibalama</p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://linkedin.com"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
+    </nav>
+  </footer>
 
 </body>
-
 </html>
