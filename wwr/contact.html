@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>White Water Rafting Co. | Contact Us</title>
   <meta name="description"
-    content="Contact White Water Rafting Co. with questions about trips, reservations, or suggestions. We are here to help you plan your next adventure.">
+    content="Contact White Water Rafting Co. with questions about trips, reservations, or suggestions.">
   <meta name="author" content="Kizza Fredrich Kibalama">
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -29,8 +29,7 @@
     <!-- CONTACT INFO -->
     <section class="contact-info">
       <h1>White Water Rafting Company</h1>
-      <p>123 Main River Street<br>
-        Kolob, California</p>
+      <p>123 Main River Street<br>Kolob, California</p>
       <p>📞 +1 999 999 9999</p>
       <p>✉️ info@whitewater.com</p>
     </section>
@@ -38,49 +37,49 @@
     <!-- MAP + FORM -->
     <section class="contact-grid">
 
-      <!-- GOOGLE MAP -->
+      <!-- MAP -->
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019259274926!2d-113.186!3d37.298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
-          allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
 
-      <!-- CONTACT FORM -->
-      <form class="contact-form">
+      <!-- FORM -->
+      <form class="contact-form" action="#" method="post">
         <fieldset>
           <legend>Get in Touch</legend>
 
+          <!-- TEXT INPUT -->
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
 
+          <!-- EMAIL INPUT -->
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
 
+          <!-- RADIO BUTTONS -->
           <p>Message Purpose</p>
-          <label>
-            <input type="radio" name="purpose" value="general" required>
-            General Inquiry
-          </label>
-          <label>
-            <input type="radio" name="purpose" value="reservation">
-            Reservation Question
-          </label>
-          <label>
-            <input type="radio" name="purpose" value="suggestion">
-            Website Suggestion
-          </label>
 
+          <input type="radio" id="general" name="purpose" value="general" required>
+          <label for="general">General Inquiry</label>
+
+          <input type="radio" id="reservation" name="purpose" value="reservation">
+          <label for="reservation">Reservation Question</label>
+
+          <input type="radio" id="suggestion" name="purpose" value="suggestion">
+          <label for="suggestion">Website Suggestion</label>
+
+          <!-- TEXTAREA -->
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
-          <label class="checkbox">
-            <input type="checkbox" name="newsletter">
-            Please subscribe me to the monthly newsletter
-          </label>
+          <!-- CHECKBOX -->
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Please subscribe me to the monthly newsletter</label>
 
+          <!-- SUBMIT BUTTON -->
           <button type="submit">Get in Touch!</button>
         </fieldset>
       </form>
@@ -122,5 +121,4 @@
   </footer>
 
 </body>
-
 </html>
