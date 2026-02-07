@@ -2,20 +2,20 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>White Water Rafting Co. | Contact Us</title>
   <meta name="description"
-    content="Contact White Water Rafting Co. with questions about trips, reservations, or suggestions.">
-  <meta name="author" content="Kizza Fredrich Kibalama">
-  <link rel="stylesheet" href="styles/rafting.css">
+    content="Contact White Water Rafting Co. with questions about trips, reservations, or suggestions. We are here to help you plan your next adventure." />
+  <meta name="author" content="Kizza Fredrich Kibalama" />
+  <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header>
-    <img src="images/logo.jpg" alt="White Water Rafting Logo">
+    <img src="images/logo.jpg" alt="White Water Rafting Logo" />
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -31,7 +31,7 @@
       <h1>White Water Rafting Company</h1>
       <p>123 Main River Street<br>Kolob, California</p>
       <p>📞 +1 999 999 9999</p>
-      <p>✉️ info@whitewater.com</p>
+      <p>✉️ <a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
     </section>
 
     <!-- MAP + FORM -->
@@ -41,45 +41,44 @@
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019259274926!2d-113.186!3d37.298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to White Water Rafting">
         </iframe>
       </div>
 
-      <!-- FORM -->
-      <form class="contact-form" action="#" method="post">
+      <!-- CONTACT FORM (exactly one form in <main>) -->
+      <form class="contact-form" action="#" method="post" autocomplete="on" novalidate>
         <fieldset>
           <legend>Get in Touch</legend>
 
-          <!-- TEXT INPUT -->
+          <!-- text input -->
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
 
-          <!-- EMAIL INPUT -->
+          <!-- email input -->
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
 
-          <!-- RADIO BUTTONS -->
+          <!-- radio group: exactly three radios, same name, each has id + label -->
           <p>Message Purpose</p>
 
-          <input type="radio" id="general" name="purpose" value="general" required>
-          <label for="general">General Inquiry</label>
+          <input type="radio" id="purpose-general" name="purpose" value="general" required>
+          <label for="purpose-general">General Inquiry</label>
 
-          <input type="radio" id="reservation" name="purpose" value="reservation">
-          <label for="reservation">Reservation Question</label>
+          <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+          <label for="purpose-reservation">Reservation Question</label>
 
-          <input type="radio" id="suggestion" name="purpose" value="suggestion">
-          <label for="suggestion">Website Suggestion</label>
+          <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
+          <label for="purpose-suggestion">Website Suggestion</label>
 
-          <!-- TEXTAREA -->
+          <!-- textarea -->
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-          <!-- CHECKBOX -->
-          <input type="checkbox" id="newsletter" name="newsletter">
+          <!-- checkbox -->
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes">
           <label for="newsletter">Please subscribe me to the monthly newsletter</label>
 
-          <!-- SUBMIT BUTTON -->
+          <!-- submit button with meaningful text -->
           <button type="submit">Get in Touch!</button>
         </fieldset>
       </form>
@@ -113,7 +112,7 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2026 White Water Rafting Co. | Kizza Fredrich Kibalama</p>
-    <nav class="socialmedia">
+    <nav class="socialmedia" aria-label="Social media links">
       <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="https://linkedin.com"><img src="images/linkedin.png" alt="LinkedIn"></a>
       <a href="https://instagram.com"><img src="images/instagram.png" alt="Instagram"></a>
@@ -121,4 +120,5 @@
   </footer>
 
 </body>
+
 </html>
